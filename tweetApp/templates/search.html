@@ -1,0 +1,21 @@
+{% extends "layout.html"%}
+
+{% block tilte %}
+Tweet
+{% endblock %}
+
+{%block content%}
+<H1 class="text-center mt-4">Search Results</H1>
+<div class="container row gap-3">
+    {%for tweet in tweet%}
+    <div class="card" style="width: 18rem;">
+        <img src="{{tweet.photo.url}}" class="img-fluid" class="card-img-top" alt="Photo">
+        <div class="card-body">
+          <h5 class="card-title">{{tweet.user.username}}</h5>
+          <p class="card-text">{{tweet.text}}</p>
+          
+        </div>
+      </div>
+    {%endfor%}
+</div>
+{%endblock%}
